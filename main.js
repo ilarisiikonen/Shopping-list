@@ -23,19 +23,19 @@ if (localStorage.getItem("shoppingList") === null) {
 // LISÄÄ
 function add (shoppingList, item) {
     item = document.getElementById("newItem").value;
- 
-    console.log(item)
-    
-    shoppingList.push(item)
-    
-    console.log(shoppingList)
+    console.log(item);
+    shoppingList.push(item);
+    console.log(shoppingList);
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+    document.querySelector('#newItem').value = "";
+
+    
 }
 
 
 
 //POISTA YKSI
-/* documetn.getElementById("delete").onclick = funtion(){
+/* document.getElementById("delete").onclick = funtion(){
 
 } */
 
