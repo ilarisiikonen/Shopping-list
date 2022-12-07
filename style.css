@@ -1,0 +1,13 @@
+body { 
+    padding: 80px;
+    background-color: black;
+    color:bisque;
+    font-family: monospace;
+    font-size: large;
+    
+  }
+
+
+  #content {
+    margin: auto;
+  }
