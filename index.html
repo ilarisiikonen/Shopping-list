@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Ostoslista</title>
-<link rel="stylesheet" href="/jsloppuprojekti/style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
    
 <div id="content">
     <h1>Ostoslista</h1>
 
-    <form id="todo">
-        <input type="text" placeholder="Mitä ostetaan?">
-        <input type="submit" value="submit">
-    </form>
+    
+        <input type="text" placeholder="Mitä ostetaan?" id="newItem">
+        <input type="submit" onclick="add(shoppingList, newItem)">
+    
 
-        <div id="lista">
+
+
+
+
+
+
+        <div id="ostoslista">
             <ul id="ostokset">
                     
             </ul>
-
         </div>
 
         <br>
