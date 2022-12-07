@@ -27,9 +27,16 @@ function add (shoppingList, item) {
     shoppingList.push(item);
     console.log(shoppingList);
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
-    document.querySelector('#newItem').value = "";
+    document.querySelector('#newItem').value = "";  
+    displayShoppings(item)
+}
 
-    
+//näytä lista
+function displayShoppings(item) {
+    const listItem = document.createElement("div")
+    listItem.classList.add(item)
+    const list = document.getElementById("shoppingList")
+    list.appendChild(listItem)
 }
 
 
