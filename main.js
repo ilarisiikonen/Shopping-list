@@ -54,13 +54,20 @@ function displayShoppings() {
     } else {
         shoppingList.forEach(element => {
         const item = document.createElement("div")
+/*         const deleteBtn = document.createElement("button") */
         item.classList.add("listItem")
         item.innerHTML = element;
         
+        //add item to the list
         lista.append(item)
 
+
+        //delete item form list
+        item.addEventListener('click', function(){
+            lista.removeChild(item)
+        })
+
         });
-     
     }
     
 }
@@ -68,31 +75,8 @@ function displayShoppings() {
 
 
 
-/* 
-// DISPLAY
-function displayShoppings(shoppingList) {
-    
-    console.log(shoppingList)
-
-    shoppingList.forEach(element => {
-        const item = document.createElement("div")
-        item.innerHTML = element;
-        const lista = document.getElementById("shoppingList")
-        lista.append(item)
-
-    });
-     
-} */
-
-
-
-
-
-
 //POISTA YKSI
-/* document.getElementById("delete").onclick = funtion(){
-
-} */
+    
 
 
 

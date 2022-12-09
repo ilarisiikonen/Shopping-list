@@ -19,7 +19,15 @@ body {
 
   /* ostos */
   .listItem {
-    width: 100px;
+    width: 200px;
     height: 50px;
     background-color: brown;
+    margin: 10px;
+    text-align: center;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    background-color: bisque;
   }
