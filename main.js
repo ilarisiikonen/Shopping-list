@@ -54,7 +54,6 @@ function displayShoppings() {
     } else {
         shoppingList.forEach(element => {
         const item = document.createElement("div")
-/*         const deleteBtn = document.createElement("button") */
         item.classList.add("listItem")
         item.innerHTML = element;
         
@@ -75,15 +74,12 @@ function displayShoppings() {
 
 
 
-//POISTA YKSI
-    
 
 
 
 
 //TYHJÄÄ KAIKKI
-
-/* funktio tyhjentää local storagen */
+//funktio tyhjentää local storagen
 function reset() {
     console.log("local storage is empty")
     localStorage.removeItem("shoppingList")
