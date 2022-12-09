@@ -25,7 +25,7 @@ if (localStorage.getItem("shoppingList") === null) {
 function add (shoppingList, item) {
 
     if (item === null) {
-        Document.getElementById("error").innerHTML = "errror"
+        document.getElementById("error").innerHTML = "errror"
     } else {
         item = document.getElementById("newItem").value;
         console.log(item + "  lisätty item");
@@ -49,16 +49,20 @@ function displayShoppings() {
     const lista = document.getElementById("shoppingList")
     lista.innerHTML = ""
     shoppingList = JSON.parse(localStorage.getItem("shoppingList")) 
-    
-    shoppingList.forEach(element => {
+    if (shoppingList === null) {
+        console.log("List is empty")
+    } else {
+        shoppingList.forEach(element => {
         const item = document.createElement("div")
         item.classList.add("listItem")
         item.innerHTML = element;
         
         lista.append(item)
 
-    });
+        });
      
+    }
+    
 }
 
 
@@ -97,7 +101,7 @@ function displayShoppings(shoppingList) {
 
 /* funktio tyhjentää local storagen */
 function reset() {
-    console.log("Lista tyhjennetty local storagesta")
+    console.log("local storage is empty")
     localStorage.removeItem("shoppingList")
     displayShoppings()
 }
