@@ -4,7 +4,7 @@ body {
     color:bisque;
     font-family: monospace;
     font-size: large;
-    
+    text-align: center;
   }
 
 
@@ -13,7 +13,7 @@ body {
   }
 
   #error {
-    display: none;
+    color: red;
   }
 
 
@@ -39,3 +39,14 @@ body {
     height: 30px;
     background-color: bisque;
   }
+
+
+
+
+
+@media only screen and (min-width: 420px) {
+  body {
+    background-color: rgb(36, 0, 0);
+  }
+}
+ 

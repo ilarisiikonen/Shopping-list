@@ -23,11 +23,12 @@ if (localStorage.getItem("shoppingList") === null) {
 
 // ADD
 function add (shoppingList, item) {
+    item = document.getElementById("newItem").value;
 
     if (item === "") {
-        document.getElementById("error").innerHTML = "errror"
+        document.getElementById("error").innerHTML = "Inputfield is empty"
     } else {
-        item = document.getElementById("newItem").value;
+        document.getElementById("error").innerHTML = ""
         console.log(item + "  lisätty item");
         shoppingList.push(item);
         console.log(shoppingList + " lista");
@@ -62,6 +63,8 @@ function displayShoppings() {
         lista.append(item)
 
       
+
+
         // marks item collected or not back to not collected
         item.addEventListener('click', function(){
             if (item.classList.contains("collectedItem")) {
@@ -73,7 +76,11 @@ function displayShoppings() {
             }
         })
 
+
+
         //delete item form list
+        //double click works on mobile but not in dev tools "mobile mode"
+
         item.addEventListener('dblclick', function(){
             lista.removeChild(item)
             console.log(shoppingList)
@@ -93,10 +100,12 @@ function displayShoppings() {
 
 
 
-//TYHJÄÄ KAIKKI
-//funktio tyhjentää local storagen
+//  RESET
+//function set shoppingList as and empty array
 function reset() {
-    console.log("local storage is empty")
-    localStorage.removeItem("shoppingList")
+
+    shoppingList = [];
+    localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
+    console.log(shoppingList)
     displayShoppings()
 }
