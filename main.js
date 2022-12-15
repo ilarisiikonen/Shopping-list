@@ -24,7 +24,7 @@ if (localStorage.getItem("shoppingList") === null) {
 // ADD
 function add (shoppingList, item) {
 
-    if (item === null) {
+    if (item === "") {
         document.getElementById("error").innerHTML = "errror"
     } else {
         item = document.getElementById("newItem").value;
@@ -62,15 +62,18 @@ function displayShoppings() {
 
 
         //delete item form list
-        item.addEventListener('click', function(){
+        item.addEventListener('dblclick', function(){
             lista.removeChild(item)
+            console.log(shoppingList)
+            shoppingList.splice(shoppingList.indexOf(element), 1)
+            console.log(shoppingList)
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
         })
 
         });
     }
     
 }
-
 
 
 
