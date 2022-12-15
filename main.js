@@ -60,6 +60,15 @@ function displayShoppings() {
         //add item to the list
         lista.append(item)
 
+      
+
+        item.addEventListener('click', function(){
+            if (item.classList.contains("collectedItem")) {
+                item.classList.add("notCollectedItem")
+            } else {
+                item.classList.add("collectedItem")
+            }
+        })
 
         //delete item form list
         item.addEventListener('dblclick', function(){

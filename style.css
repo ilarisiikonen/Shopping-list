@@ -26,6 +26,14 @@ body {
     text-align: center;
   }
 
+  .collectedItem {
+    background-color: darkblue;
+  }
+
+  .notCollectedItem {
+    background-color: sandybrown;
+  }
+
   button {
     width: 30px;
     height: 30px;
