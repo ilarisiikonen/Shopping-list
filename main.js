@@ -55,17 +55,20 @@ function displayShoppings() {
         shoppingList.forEach(element => {
         const item = document.createElement("div")
         item.classList.add("listItem")
+        item.classList.add("notCollectedItem")
         item.innerHTML = element;
         
         //add item to the list
         lista.append(item)
 
       
-
+        // marks item collected or not back to not collected
         item.addEventListener('click', function(){
             if (item.classList.contains("collectedItem")) {
+                item.classList.remove("collectedItem")
                 item.classList.add("notCollectedItem")
             } else {
+                item.classList.remove("notCollectedItem")
                 item.classList.add("collectedItem")
             }
         })
