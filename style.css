@@ -5,8 +5,19 @@ body {
     font-family: monospace;
     font-size: large;
     text-align: center;
+    margin: auto;
+/*     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade 1s ease-in 1s; */
+
   }
 
+  #instructions {
+    font-size: small;
+    opacity: 0.8;
+    margin: 10px 0px 25px 0px;
+    
+  }
 
   #content {
     margin: auto;
@@ -16,18 +27,35 @@ body {
     color: red;
   }
 
+  .button {
+    background-color: rgb(3, 27, 27);
+    color: bisque;
+    border: none;
+    padding: 10px 25px;
+    margin: 20px 0px 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background-color:rgb(0, 0, 0);
+  }
 
   /* ostos */
   .listItem {
-    width: 200px;
-    height: 50px;
+    width:auto;
+    height: 30px;
     background-color: brown;
     margin: 10px;
     text-align: center;
+    
   }
 
   .collectedItem {
-    background-color: darkblue;
+    background-color: rgb(0, 94, 8);
+    text-decoration: line-through;
   }
 
   .notCollectedItem {
@@ -49,4 +77,13 @@ body {
     background-color: rgb(36, 0, 0);
   }
 }
- 
+
+
+/* @keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */

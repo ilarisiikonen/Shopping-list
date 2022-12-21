@@ -26,7 +26,7 @@ function add (shoppingList, item) {
     item = document.getElementById("newItem").value;
 
     if (item === "") {
-        document.getElementById("error").innerHTML = "Inputfield is empty"
+        document.getElementById("error").innerHTML = "Input field is empty"
     } else {
         document.getElementById("error").innerHTML = ""
         console.log(item + "  lisätty item");
