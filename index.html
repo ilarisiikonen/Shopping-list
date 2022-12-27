@@ -11,12 +11,12 @@
 <body>
    
 <div id="content">
-    <h1>Ostoslista</h1>
+    <h1>Shopping list</h1>
 
     <p id="instructions">Click item once to mark it as collected or not collected. <br><br> Double click item to remove it.</p>
 
-        <input type="text" placeholder="Mitä ostetaan?" id="newItem">
-        <input type="submit" class="button" id="enter" onclick="add(shoppingList, newItem)">
+        <input type="text" placeholder="Mitäs ostetaan?" id="newItem">
+        <input type="submit" class="button" id="enter" value="Add" onclick="add(shoppingList, newItem)">
         <h2 id="error"></h2>
     
         <div id="shoppingList"></div>
@@ -26,7 +26,7 @@
 
 
 <!--     Tyhjennä koko lista -->
- <input type="button" class="button" onclick="reset()" value="Tyhjnenä">
+ <input type="button" class="button" onclick="reset()" value="Reset">
 
     
 </div>
