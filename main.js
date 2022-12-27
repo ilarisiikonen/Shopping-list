@@ -45,6 +45,27 @@ function add (shoppingList, item) {
 
 
 
+const field = document.getElementById('newItem');
+
+field.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('enter').click();
+    }
+});
+
+
+
+/* var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+ */
+
+
 // DISPLAY
 function displayShoppings() {
     const lista = document.getElementById("shoppingList")
