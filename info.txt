@@ -1,0 +1,7 @@
+sää rajapinta api. näyttää lämpötilan kaupungin mukaan.
+
+vihreä nuoli kun checkattu
+
+localstorage muistaa jos item checkattu
+
+undo palauttaa edellisen listan

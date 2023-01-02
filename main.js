@@ -17,6 +17,7 @@ if (localStorage.getItem("shoppingList") === null) {
     displayShoppings()
 }
 
+/* jos  */
 
 
 
@@ -44,7 +45,7 @@ function add (shoppingList, item) {
 }
 
 
-
+/* add items with enter key */
 const field = document.getElementById('newItem');
 
 field.addEventListener("keyup", function(event) {
@@ -70,6 +71,9 @@ function displayShoppings() {
         item.classList.add("notCollectedItem")
         item.innerHTML = element;
         
+       /*  const img = document.createElement("img")
+        img.src = 'check.png'
+        document.getElementsByClassName("collectedItem") */
         //add item to the list
         lista.append(item)
 

@@ -55,8 +55,9 @@ body {
   }
 
   .collectedItem {
-    background-color: #5a9e54;
+    /* background-color: #083004; */
     text-decoration: line-through;
+    background-image: url('check.png');
   }
 
   .notCollectedItem {
