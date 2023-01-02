@@ -50,11 +50,12 @@ body {
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
+    padding-top: 8px;
     
   }
 
   .collectedItem {
-    background-color: #0c8f00;
+    background-color: #5a9e54;
     text-decoration: line-through;
   }
 
@@ -74,7 +75,7 @@ body {
 
 @media only screen and (min-width: 420px) {
   body {
-    background-color: rgb(36, 0, 0);
+    background-color: rgb(99, 99, 99);
   }
 }
 
