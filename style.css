@@ -42,6 +42,10 @@ body {
     background-color:rgb(0, 0, 0);
   }
 
+  .undo {
+    font-size: 12px;
+  }
+
   /* ostos */
   .listItem {
     width: auto;
@@ -64,11 +68,6 @@ body {
     background-color: #ffffff;
   }
 
-  button {
-    width: 30px;
-    height: 30px;
-    background-color: bisque;
-  }
 
 
 
@@ -81,11 +80,3 @@ body {
 }
 
 
-/* @keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */

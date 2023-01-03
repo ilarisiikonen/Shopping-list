@@ -5,3 +5,5 @@ vihreä nuoli kun checkattu
 localstorage muistaa jos item checkattu
 
 undo palauttaa edellisen listan
+
+siisti js

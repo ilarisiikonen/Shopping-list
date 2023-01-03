@@ -1,6 +1,8 @@
 //alustetaan ostoslista
 shoppingList = [];
 
+//edellinen ostoslista
+previousShoppingList = []
 
 /* Ohjelma katsoo löytyykö local storagesta ostoslistaa. Jos lista löytyy, ohjelma hakee sen. Ja jos ei, se asetetaan sinne */
 
@@ -12,6 +14,7 @@ if (localStorage.getItem("shoppingList") === null) {
     console.log(shoppingList)
 } else {
     shoppingList = JSON.parse(localStorage.getItem("shoppingList"))
+    previousShoppingList = JSON.parse(localStorage.getItem("previousShoppingList"))
     console.log(shoppingList)
     console.log("localstoragessa on jo tietoa")
     displayShoppings()
@@ -119,7 +122,19 @@ function displayShoppings() {
 //function set shoppingList as and empty array
 function reset() {
 
+    localStorage.setItem("previousShoppingList", JSON.stringify(shoppingList));
+
     shoppingList = [];
+    localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
+
+    console.log(shoppingList)
+    displayShoppings()
+}
+
+//  UNDO
+//function returns previous list
+function undo() {
+    shoppingList = JSON.parse(localStorage.getItem("previousShoppingList"))
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
     console.log(shoppingList)
     displayShoppings()
