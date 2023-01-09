@@ -77,6 +77,7 @@ function displayShoppings() {
        /*  const img = document.createElement("img")
         img.src = 'check.png'
         document.getElementsByClassName("collectedItem") */
+        
         //add item to the list
         lista.append(item)
 

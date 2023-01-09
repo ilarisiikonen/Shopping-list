@@ -13,7 +13,14 @@ body {
     font-size: small;
     opacity: 0.8;
     margin: 10px 0px 25px 0px;
-    
+  }
+
+  #newItem {
+    width:fit-content ;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
   }
 
   #content {
@@ -49,6 +56,7 @@ body {
   /* ostos */
   .listItem {
     width: auto;
+    
     height: 30px;
     margin: 10px;
     text-align: center;
@@ -75,7 +83,7 @@ body {
 
 @media only screen and (min-width: 420px) {
   body {
-    background-color: rgb(99, 99, 99);
+    background-color: rgb(243, 255, 138);
   }
 }
 

@@ -1,9 +1,15 @@
-sää rajapinta api. näyttää lämpötilan kaupungin mukaan.
+undo palauttaa edellisen listan
 
 vihreä nuoli kun checkattu
 
 localstorage muistaa jos item checkattu
 
-undo palauttaa edellisen listan
+
+desktop versio
 
 siisti js
+
+
+
+
+sää rajapinta api. näyttää lämpötilan kaupungin mukaan.
