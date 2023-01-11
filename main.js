@@ -7,9 +7,7 @@ previousShoppingList = [];
 /* Ohjelma katsoo löytyykö local storagesta ostoslistaa. Jos lista löytyy, ohjelma hakee sen. Ja jos ei, se asetetaan tyhjänä sinne */
 
 if (localStorage.getItem("shoppingList") === null) {
-    
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
-
     console.log("localstoragessa ei ollut tietoa mutta nyt on.");
     console.log(shoppingList)
 } else {
@@ -19,9 +17,6 @@ if (localStorage.getItem("shoppingList") === null) {
     console.log("localstoragessa on jo tietoa")
     displayShoppings()
 }
-
-/* jos  */
-
 
 
 
@@ -74,10 +69,7 @@ function displayShoppings() {
         item.classList.add("notCollectedItem")
         item.innerHTML = element;
         
-       /*  const img = document.createElement("img")
-        img.src = 'check.png'
-        document.getElementsByClassName("collectedItem") */
-        
+    
         //add item to the list
         lista.append(item)
 
@@ -104,7 +96,7 @@ function displayShoppings() {
                 item.classList.remove("collectedItem")
                 item.classList.add("notCollectedItem")
             } else {
-                
+
                 item.classList.remove("notCollectedItem")
                 item.classList.add("collectedItem")
             }

@@ -21,6 +21,7 @@ body {
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
+    font-weight: 500;
   }
 
   #content {
@@ -65,7 +66,6 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     padding-top: 8px;
-    
   }
 
   .collectedItem {
@@ -85,6 +85,21 @@ body {
 @media only screen and (min-width: 420px) {
   body {
     background-color: rgb(179, 221, 195);
+  }
+
+  #newItem {
+    width: 300px ;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .listItem {
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    
   }
 }
 
