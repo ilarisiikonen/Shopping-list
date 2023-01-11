@@ -85,11 +85,26 @@ function displayShoppings() {
 
 
         // marks item collected or not back to not collected
-        item.addEventListener('click', function(){
+
+   /*      item.addEventListener('click', function(){
             if (item.classList.contains("collectedItem")) {
                 item.classList.remove("collectedItem")
                 item.classList.add("notCollectedItem")
             } else {
+                item.classList.remove("notCollectedItem")
+                item.classList.add("collectedItem")
+            }
+        })
+ */
+
+
+            item.addEventListener('click', function(){
+            if (item.classList.contains("collectedItem")) {
+
+                item.classList.remove("collectedItem")
+                item.classList.add("notCollectedItem")
+            } else {
+                
                 item.classList.remove("notCollectedItem")
                 item.classList.add("collectedItem")
             }

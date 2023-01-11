@@ -1,6 +1,6 @@
 body { 
     padding: 80px;
-/*     background-color: #61876E; */
+    background-color:#CADEDF;
     color:rgb(0, 0, 0);
     font-family: monospace;
     font-size: large;
@@ -9,7 +9,7 @@ body {
 
   }
 
-  #instructions {
+ p {
     font-size: small;
     opacity: 0.8;
     margin: 10px 0px 25px 0px;
@@ -32,8 +32,8 @@ body {
   }
 
   .button {
-    background-color: #333333;
-    color: rgb(255, 255, 255);
+    background-color: #7CB7AF;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 25px;
     margin: 20px 0px 10px 0px;
@@ -43,20 +43,22 @@ body {
     font-size: 16px;
     border: 2px solid black;
     border-radius: 5px;
+    
   }
   
   .button:hover {
-    background-color:rgb(0, 0, 0);
+    background-color: #36534f;
+    color: #ffffff;
   }
 
   .undo {
     font-size: 12px;
   }
 
-  /* ostos */
+  
   .listItem {
     width: auto;
-    
+    font-weight: 550;
     height: 30px;
     margin: 10px;
     text-align: center;
@@ -67,9 +69,8 @@ body {
   }
 
   .collectedItem {
-    /* background-color: #083004; */
+    background-color:#16796F;
     text-decoration: line-through;
-    background-image: url('check.png');
   }
 
   .notCollectedItem {
@@ -83,7 +84,7 @@ body {
 
 @media only screen and (min-width: 420px) {
   body {
-    background-color: rgb(243, 255, 138);
+    background-color: rgb(179, 221, 195);
   }
 }
 
