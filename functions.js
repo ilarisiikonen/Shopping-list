@@ -41,35 +41,46 @@ const displayShoppings = () => {
     const list = document.getElementById("shoppingList")
     list.innerHTML = ""
     shoppingList = JSON.parse(localStorage.getItem("shoppingList")) 
-
-
     const items = shoppingList.map(({ name }) => name)
-    console.log(items)
 
     if (shoppingList === null) {
         console.log("List is empty")
     } else {
 
+        
         items.forEach(element => {
         const item = document.createElement("div")
         item.classList.add("listItem")
-        item.classList.add("notCollectedItem")
+        
         item.innerHTML = element;
         
         list.append(item) //add item to the list
+        
+        if (shoppingList[items.indexOf((element), 0)].state === false) {
+            item.classList.add("notCollectedItem")
+        } else {
+            item.classList.remove("notCollectedItem")
+            item.classList.add("collectedItem")
+        } 
+      
 
                 //mark as collected
-                item.addEventListener('click', function(){
-                if (item.classList.contains("collectedItem")) {
-
-                    item.classList.remove("collectedItem")
-                    item.classList.add("notCollectedItem")
-                } else {
-
-                    item.classList.remove("notCollectedItem")
-                    item.classList.add("collectedItem")
-                }
-            })
+        item.addEventListener('click', function(){
+                   
+            if (shoppingList[items.indexOf((element), 0)].state === false) {
+               
+                item.classList.remove("notCollectedItem")
+                item.classList.add("collectedItem")
+                shoppingList[items.indexOf((element), 0)].state = true
+                localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
+            } else {
+                shoppingList[items.indexOf((element), 0)].state = false
+                localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
+                item.classList.remove("collectedItem")
+                item.classList.add("notCollectedItem")
+            } 
+        })
+               
 
             //delete item form list
             //double click works on mobile but not in dev tools "mobile mode"
