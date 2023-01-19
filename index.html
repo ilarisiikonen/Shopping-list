@@ -11,29 +11,33 @@
 </head>
 <body>
    
-<div id="content">
-    <h1>Shopping list</h1>
+    <div id="content">
+        <h1>Shopping list</h1>
 
-    <p>Click item once to mark it as collected or not collected. <br><br> Double click item to remove it.</p>
+        <p>Click item once to mark it as collected or not collected. <br><br> Double click item to remove it.</p>
 
-        <input type="text" placeholder="Mitäs ostetaan?" id="newItem">
-        <input type="submit" class="button" id="enter" value="Add" onclick="add(shoppingList, newItem)">
-        <h2 id="error"></h2>
+            <input type="text" placeholder="What do you need?" id="newItem">
+            <input type="submit" class="button" id="enter" value="Add" onclick="add(shoppingList, newItem)">
+            <h2 id="error"></h2>
+        
+            <div id="shoppingList"></div>
+
+            <br>
+
+
+
+    <!--     Tyhjennä koko lista -->
+    <input type="button" class="button" onclick="reset()" value="Reset">
     
-        <div id="shoppingList"></div>
+    <!-- Palauttaa edeltävän listan -->
+    <input type="button" class="button undo" onclick="undo()" value="Undo">
 
-        <br>
+        
+    </div>
 
-
-
-<!--     Tyhjennä koko lista -->
- <input type="button" class="button" onclick="reset()" value="Reset">
- 
- <!-- Palauttaa edeltävän listan -->
- <input type="button" class="button undo" onclick="undo()" value="Undo">
-
-    
-</div>
+    <footer>
+        <p>Ilari Siikonen</p>
+    </footer>
 
 <script src="main.js" defer></script>
 </body>

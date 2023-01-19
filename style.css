@@ -78,11 +78,14 @@ body {
   }
 
 
+  footer p {
+    opacity: 0.4;
+    bottom: 0;
+  }
 
 
 
-
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 490px) {
   body {
     background-color: rgb(179, 221, 195);
   }

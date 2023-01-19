@@ -28,9 +28,8 @@ function add (shoppingList, item) {
         document.getElementById("error").innerHTML = "Input field is empty"
     } else {
         document.getElementById("error").innerHTML = ""
-        console.log(item + "  lisätty item");
         shoppingList.push(item);
-        console.log(shoppingList + " lista");
+
         localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
 
         //clear input
@@ -46,8 +45,9 @@ function add (shoppingList, item) {
 /* add items with enter key */
 const field = document.getElementById('newItem');
 
+
 field.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.code == "Enter") {
         event.preventDefault();
         document.getElementById('enter').click();
     }
@@ -69,27 +69,9 @@ function displayShoppings() {
         item.classList.add("notCollectedItem")
         item.innerHTML = element;
         
-    
-        //add item to the list
-        lista.append(item)
+        lista.append(item) //add item to the list
 
-      
-
-
-        // marks item collected or not back to not collected
-
-   /*      item.addEventListener('click', function(){
-            if (item.classList.contains("collectedItem")) {
-                item.classList.remove("collectedItem")
-                item.classList.add("notCollectedItem")
-            } else {
-                item.classList.remove("notCollectedItem")
-                item.classList.add("collectedItem")
-            }
-        })
- */
-
-
+            //mark as collected
             item.addEventListener('click', function(){
             if (item.classList.contains("collectedItem")) {
 
@@ -102,11 +84,8 @@ function displayShoppings() {
             }
         })
 
-
-
         //delete item form list
         //double click works on mobile but not in dev tools "mobile mode"
-
         item.addEventListener('dblclick', function(){
             lista.removeChild(item)
             console.log(shoppingList)
