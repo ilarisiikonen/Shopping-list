@@ -6,7 +6,6 @@ body {
     font-size: large;
     text-align: center;
     margin: auto;
-
   }
 
  p {
@@ -44,7 +43,6 @@ body {
     font-size: 16px;
     border: 2px solid black;
     border-radius: 5px;
-    
   }
   
   .button:hover {
