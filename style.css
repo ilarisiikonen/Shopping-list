@@ -68,7 +68,7 @@ body {
 
   .collectedItem {
     background-color:#16796F;
-    text-decoration: line-through;
+
   }
 
   .notCollectedItem {
@@ -83,7 +83,7 @@ body {
 
 
 
-@media only screen and (min-width: 490px) {
+@media only screen and (min-width: 650px) {
   body {
     background-color: rgb(179, 221, 195);
   }

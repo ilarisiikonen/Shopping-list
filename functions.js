@@ -43,10 +43,7 @@ const displayShoppings = () => {
     shoppingList = JSON.parse(localStorage.getItem("shoppingList")) 
     const items = shoppingList.map(({ name }) => name)
 
-    if (shoppingList === null) {
-        console.log("List is empty")
-    } else {
-
+    
         
         items.forEach(element => {
         const item = document.createElement("div")
@@ -64,7 +61,7 @@ const displayShoppings = () => {
         } 
       
 
-                //mark as collected
+        //mark as collected
         item.addEventListener('click', function(){
                    
             if (shoppingList[items.indexOf((element), 0)].state === false) {
@@ -84,14 +81,13 @@ const displayShoppings = () => {
 
             //delete item form list
             //double click works on mobile but not in dev tools "mobile mode"
-             item.addEventListener('dblclick', function(){
-                list.removeChild(item)
-                shoppingList.splice(shoppingList.indexOf(element), 1)
-                localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
-            })
-
-        });
-    }
+        item.addEventListener('dblclick', function(){
+            list.removeChild(item)
+            localStorage.setItem("previousShoppingList", JSON.stringify(shoppingList));
+            shoppingList.splice(shoppingList.indexOf(element), 1)
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
+        })
+    });
 }
 
 
@@ -104,7 +100,6 @@ const reset = () => {
     shoppingList = [];
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
 
-    console.log(shoppingList)
     displayShoppings()
 }
 
@@ -113,6 +108,6 @@ const reset = () => {
 const undo = () => {
     shoppingList = JSON.parse(localStorage.getItem("previousShoppingList"))
     localStorage.setItem("shoppingList", JSON.stringify(shoppingList))
-    console.log(shoppingList)
+
     displayShoppings()
 }
