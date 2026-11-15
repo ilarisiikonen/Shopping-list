@@ -1,3 +1,4 @@
+//lol
 //alustetaan ostoslista
 shoppingList = [];
 
